@@ -198,7 +198,6 @@ const AdminDashboard = () => {
               className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="p-5">
-                {/* Order Header */}
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800">
@@ -208,6 +207,12 @@ const AdminDashboard = () => {
                       #{order._id.slice(-6)}
                     </p>
                   </div>
+                  <button
+                    onClick={() => router.push(`/dashboard/order/${order._id}`)}
+                    className="px-3 py-1 text-sm bg-gray-100 border border-gray-300 rounded hover:bg-gray-200 transition"
+                  >
+                    View Details
+                  </button>
                 </div>
 
                 {/* Customer Info */}

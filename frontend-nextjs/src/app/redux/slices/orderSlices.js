@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://order-management-dxob.onrender.com";
 
 export const createOrder = createAsyncThunk(
   'orders/createOrder',
@@ -28,7 +28,7 @@ export const fetchOrders = createAsyncThunk("orders/fetchAll", async () => {
 export const fetchOrderById = createAsyncThunk(
   "orders/fetchById",
   async (id) => {
-    const res = await axios.get(`${BASE_URL}/${id}`);
+    const res = await axios.get(`${BASE_URL}/order/${id}`);
     return res.data;
   }
 );

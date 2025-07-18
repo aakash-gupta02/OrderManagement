@@ -5,7 +5,7 @@ export const loginAdmin = createAsyncThunk(
     'auth/loginAdmin',
     async ({ email, password }, { rejectWithValue }) => {
         try {
-            const response = await axios.post('http://localhost:5000/auth/admin/login', { email, password });
+            const response = await axios.post('https://order-management-dxob.onrender.com/auth/admin/login', { email, password });
             return response.data;
         } catch (error) {
             return rejectWithValue(error.response.data);

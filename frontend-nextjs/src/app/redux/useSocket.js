@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 import { useOrder } from "./orderHook";
 import { toast } from "react-toastify";
 
-const socket = io("http://localhost:5000"); // backend URL
+const socket = io("https://order-management-dxob.onrender.com"); // backend URL
 
 export const useSocket = () => {
   const { fetchOrders, updateOrderQuantity, deleteOrder, fetchOrderById } =
